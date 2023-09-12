@@ -1,0 +1,29 @@
+.cart-sidebar {
+    grid-column: span 2;
+}
+
+.cart-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: .2rem;
+}
+
+.cart-item {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+.cart-item-quantity-input {
+    width: 35px;
+}
+
+@media only screen and (max-width: 390px) {
+    .cart-sidebar {
+        display: none;
+    }
+}
