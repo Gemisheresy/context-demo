@@ -1,45 +1,45 @@
+import { useState, useEffect } from "react"
 import "../styles/gallery.css"
 import GalleryItem from "./GalleryItem"
+import { Container, Row, Col } from "react-bootstrap"
+import { ITEMS } from "../constants"
 
-const items = [
-    {
-        title: "HGUC Jegan D",
-        price: 17.99,
-        description: "this is a jegan D and retooled jegan",
-        sku: 1
-    },
-    {
-        title: "HGUC Jegan",
-        price: 17.99,
-        description: "this is a jegan the longest used mobile suit in uc",
-        sku: 2
-    },
-    {
-        title: "HGUC Jegan J",
-        price: 17.99,
-        description: "this is a jegan j the retooled for the late uc",
-        sku: 3
-    },
-    {
-        title: "HGUC Jegan S",
-        price: 17.99,
-        description: "this is a stark jegan",
-        sku: 4
-    }
-]
-export default function Gallery() {
+const GalleryRow = ({ item }) => {
     return (
-        <section className="gallery">
+        <Col key={item.sku} lg={{ span: 2 }}>
+            <GalleryItem item={item} />
+        </Col >
+    )
+}
+
+const GalleryGrid = ({ items, rowsLength }) => {
+    const rowsArray = []
+    for (let i = 0; i < items.length; i += rowsLength) {
+        rowsArray.push(items.slice(i, i + rowsLength));
+    }
+    return (
+        <>
+            {rowsArray.map((row, i) => {
+                return (
+                    <Row key={`row-${i}`}>
+                        {row.map((item) => <GalleryRow item={item} />)}
+                    </Row >
+                )
+            })}
+        </>
+    )
+}
+export default function Gallery() {
+    const [items, setItems] = useState([])
+    useEffect(() => {
+        setItems(ITEMS)
+    }, [])
+    return (
+        <>
             <h1>Gallery</h1>
-            <div className="gallery-grid">
-                {items.map((item) => {
-                    return (
-                        <div key={item.sku} className="gallery-item">
-                            <GalleryItem item={item} />
-                        </div>
-                    )
-                })}
-            </div>
-        </section>
+            <Container className="gallery-grid" lg={12}>
+                {items.length > 0 && <GalleryGrid items={items} rowsLength={6} />}
+            </Container>
+        </>
     )
 }

@@ -3,13 +3,7 @@
 }
 
 .gallery-grid {
-    display: grid;
-    width: 75%;
-    margin-left: auto;
-    margin-right: auto;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: .2rem;
-    align-items: center;
+    border: solid;
 }
 
 .gallery-item {
