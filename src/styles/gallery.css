@@ -3,10 +3,35 @@
 }
 
 .gallery-grid {
-    border: solid;
+    border: 16px ridge #8A4B1A;
+    border-radius: 8px;
+    background-color: #521510;
 }
 
 .gallery-item {
-    border: 1px solid;
-    width: 200px;
+    width: 12rem;
+    border: 8px ridge #8A4B1A;
+    background-color: #9D5B23;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.gallery-item-body {
+    height: 6rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: gold
+}
+
+.gallery-item-button {
+    width: 100%;
+    border: 8px ridge #8A4B1A;
+    color: gold;
+    background-color: #8041A8;
+    border-radius: 4px;
+}
+
+.gallery-item-button:active {
+    background-color: #A67EFF
 }

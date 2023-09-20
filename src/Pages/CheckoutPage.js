@@ -15,23 +15,24 @@ export default function CheckoutPage(props) {
                         </Row>
                     )
                 })}
-                <Row>
-                    <Col lg={{ span: 2, offset: 7 }}>
-                        <h3>Subtotal:</h3>
-                    </Col>
-                    <Col lg={{ span: 2, offset: 1 }}>
-                        <h3>${getCartSubtotal()}</h3>
-                    </Col>
+                <Row className="checkout-total">
+                    <Row >
+                        <Col lg={{ span: 2, offset: 7 }}>
+                            <h3>Subtotal:</h3>
+                        </Col>
+                        <Col lg={{ span: 2, offset: 1 }}>
+                            <h3>{getCartSubtotal()}g</h3>
+                        </Col>
+                    </Row>
+                    <Row >
+                        <Col lg={{ span: 2, offset: 7 }}>
+                            <h3>Total:</h3>
+                        </Col>
+                        <Col lg={{ span: 2, offset: 1 }}>
+                            <h3>{getCartTotal(getCartSubtotal())}g</h3>
+                        </Col>
+                    </Row>
                 </Row>
-                <Row >
-                    <Col lg={{ span: 2, offset: 7 }}>
-                        <h3>Total:</h3>
-                    </Col>
-                    <Col lg={{ span: 2, offset: 1 }}>
-                        <h3>${getCartTotal(getCartSubtotal())}</h3>
-                    </Col>
-                </Row>
-
             </Container>
         </main >
     )

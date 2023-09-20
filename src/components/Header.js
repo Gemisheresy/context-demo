@@ -6,7 +6,7 @@ export default function Header() {
         <header className="header">
             <Container>
                 <Row>
-                    <Col></Col>
+                    <Col><h1>Gemis Gear Galleria</h1></Col>
                     <Col>
                         <Navigation />
                     </Col>

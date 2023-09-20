@@ -1,13 +1,29 @@
 .header {
-    height: 100px;
+    border: 18px ridge #8A4B1A;
+    border-radius: 9px;
+    background-color: #B6493E;
+}
+
+.header h1 {
+    margin-top: 8px;
 }
 
 .navi-bar {
-    margin-top: 20px;
+    margin-top: 10px;
+}
+
+.navi-list {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .navi-bar a {
-    color: black;
+    color: gold;
     text-decoration: none;
 }
 
@@ -47,8 +63,8 @@
 
 
 .cart-item-total {
-    font-size: 10px;
-    margin-top: 4px;
+    color: black;
+    font-size: 14px;
     grid-column: 1;
     grid-row: 1;
     z-index: 1;

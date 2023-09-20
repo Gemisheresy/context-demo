@@ -5,10 +5,6 @@ export default function CartIcon() {
     const getMarginOffset = (cart) => {
         const digits = `${cart}`.length
         switch (digits) {
-            case 0:
-                return "24px";
-            case 1:
-                return "24px";
             case 2:
                 return "21px";
             case 3:

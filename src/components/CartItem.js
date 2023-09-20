@@ -2,11 +2,15 @@ import { useCartContext } from "../context/cart"
 import { Col } from "react-bootstrap"
 export default function CartItem({ item }) {
     const { removeItemFromCart, updateQuantityOfCartItem } = useCartContext()
+    const itemImg = require(`../assets/${item.src}`)
     const handleQuantityChange = (e) => {
         updateQuantityOfCartItem(item, parseInt(e.target.value))
     }
     return (
         <>
+            <Col>
+                <img src={itemImg} height={80} width={80} />
+            </Col>
             <Col>
                 <p>{`sku ${item.sku}`}</p>
             </Col>

@@ -1,7 +1,22 @@
 .checkout-box {
-    border: 1px solid;
+    border: 8px ridge #8A4B1A;
+    border-radius: 4px;
+    background-color: #521510;
+    color: gold
 }
 
 .checkout-row {
-    border-bottom: 1px solid;
+    border: 8px ridge #8A4B1A;
+    background-color: #9D5B23;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkout-total {
+    background-color: #B6493E;
+    border: 8px ridge #8A4B1A;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
 }
